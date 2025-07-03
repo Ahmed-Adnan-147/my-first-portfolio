@@ -1,0 +1,113 @@
+<!-- 1) Tables: Data ko table mein show karte hain
+2) Forms: User input lena -- login ya contact form
+3) Basic CSS: Thoda styling ka introduction
+
+1. Tables
+Syntax:
+
+html
+Copy
+Edit
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Adnan</td>
+    <td>21</td>
+  </tr>
+</table>
+✅ 2. Forms
+Syntax:
+
+html
+Copy
+Edit
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email">
+
+  <button type="submit">Submit</button>
+</form>
+✅ 3. Basic CSS
+CSS likhne ka 3 tarika hota hai:
+
+Inline: <h1 style="color: red;">Heading</h1>
+
+Internal: <style> tag ke andar
+
+External: .css file bana ke
+
+Example:
+
+html
+Copy
+Edit
+<style>
+  body {
+    background-color: #f0f0f0;
+  }
+  h1 {
+    color: blue;
+  }
+</style>
+📌 Day 3 Mini Project
+Task:
+Ek page banao:
+✅ Ek table ho — jaise students ka data (Name, Age, Course)
+✅ Ek simple contact form ho (Name, Email, Message)
+✅ Thoda CSS lagao (colors, font) — Internal ya Inline
+
+File ka naam: contact.html
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 3 Learnings</title>
+        <style>
+            h1{
+                color: blue;
+            }
+            body{
+                background-color: #cdcdcd;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- <h1 style="color: red;">Heading</h1> -->
+        <h1>Heading</h1>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+ 
+            <button type="submit">Submit</button>
+        </form>
+
+
+
+
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Adnan</td>
+                <td>22</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,222 @@
+<!-- GET kya hota hai?
+GET ka matlab hota hai: Browser server se data ‘mangta’ hai.
+
+📌 Real life analogy:
+Socho aap Google pe search karte ho:
+
+arduino
+Copy
+Edit
+https://www.google.com/search?q=chatgpt
+Yahan ?q=chatgpt jo URL me hai, wahi query string hai.
+
+q ka matlab hai query, aur chatgpt uska value hai.
+
+Server ko pata chalta hai ki user ne kya search kiya.
+
+Form me bhi agar aap method="GET" use karte ho:
+
+Data URL ke sath chala jata hai.
+
+Sabko dikhta hai (browser history me bhi).
+
+✅ GET kab use hota hai?
+
+Jab koi sensitive data nahi hota (e.g. search query, filters, page number).
+
+Jab aap chahte ho ki URL shareable ho.
+Example: Amazon filter — ?category=mobile&price=low
+
+✅ 2️⃣ POST kya hota hai?
+POST ka matlab hota hai: Browser server ko data bhejta hai — URL me nahi, request ke body me.
+
+📌 Real life analogy:
+Socho aap Facebook pe login form bharte ho:
+
+Username, Password server ko bhejna hai.
+
+Agar URL me bhejte toh sabko password dikhta!
+
+Isliye method="POST" se bhejte hain.
+
+POST me:
+
+Data URL me nahi dikhta.
+
+Data secure hota hai (thoda — HTTPS ho toh hi properly secure hota hai!).
+
+Bada data bhi bhej sakte ho (jaise file upload).
+
+✅ POST kab use hota hai?
+
+Jab sensitive data hota hai — password, payment details.
+
+Jab aap database me kuch insert/update karte ho.
+
+Jab data URL me dikhana nahi chahte.
+
+✅ Real life form example
+Login Form:
+
+html
+Copy
+Edit
+<form method="POST" action="/login">
+  <input name="username">
+  <input type="password" name="password">
+  <button type="submit">Login</button>
+</form>
+Server ko username aur password milta hai.
+
+URL: /login
+
+Data: username=adnan&password=1234 body me chala jata hai.
+
+URL me password nahi dikhta.
+
+Search Form (GET):
+
+html
+Copy
+Edit
+<form method="GET" action="/search">
+  <input name="q">
+  <button type="submit">Search</button>
+</form>
+Agar q me laptop likh ke search karo toh:
+
+bash
+Copy
+Edit
+/search?q=laptop
+URL shareable hai — kisi ko bhejo toh same result aayega.
+
+✅ GET vs POST in 1 line
+GET	POST
+Data URL me dikhta hai	Data URL me nahi dikhta
+Bookmarks & shareable	Secret data safe bhejne ke liye
+Small data	Bada data bhi chalega
+Read-only operations	Write operations
+
+✅ Ek simple real-time scenario
+🔎 GET: “Show me products under ₹500.”
+
+/products?price=500
+
+✅ POST: “Add this product to my cart.”
+
+Form bharo → server ko POST request → cart update.
+
+⭐ Summary
+GET: Read karo, URL me dikhao.
+
+POST: Write karo, URL me mat dikhao. -->
+
+<!-- ----------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day 3 Project</title>
+</head>
+
+<body>
+    <!-- Table -->
+    <table border="1">
+        <tr>
+            <th colspan="5">Students Data</th>
+        </tr>
+        <!-- <h1>Students Data</h1> -->
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Mobile</th>
+        </tr>
+        <tr>
+            <td>Adnan</td>
+            <td>22</td>
+            <td>Male</td>
+            <td>CSE</td>
+            <td>9023842303</td>
+        </tr>
+        <tr>
+            <td>Zoya</td>
+            <td>22</td>
+            <td>Female</td>
+            <td>ECE</td>
+            <td>934342303</td>
+        </tr>
+        <tr>
+            <td>Adil</td>
+            <td>30</td>
+            <td>Male</td>
+            <td>Civil</td>
+            <td>909485843</td>
+        </tr>
+
+    </table>
+
+    <br><br><br>
+
+    <!-- Contact Form -->
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"> <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"> <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message.."></textarea> <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <!-- <form method="GET" action="/search">
+  <input name="q">
+  <button type="submit">Search</button>
+</form> -->
+</body>
+
+</html>
+
+
+<!-- ------------------------------FILE TO EXPLaIN GET & POST-------------------------------------------------- -->
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>GET and POST Example</title>
+</head>
+<body>
+
+  <h2>🔍 Search Form (GET)</h2>
+  <form method="GET" action="/search">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="q" placeholder="What do you want to search?">
+    <button type="submit">Search</button>
+  </form>
+
+  <p>When you click Search, the data goes in the URL as ?q=...</p>
+
+  <hr>
+
+  <h2>🔒 Login Form (POST)</h2>
+  <!-- is line ke through check kar sakte ho ki data server pe kaise store hua -->
+  <!-- <form method="POST" action="https://httpbin.org/post"> -->
+      <form method="POST" action="/login">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p>When you click Login, the data goes hidden in the request body (URL stays clean).</p>
+
+</body>
+</html>
