@@ -1,0 +1,147 @@
+<!-- 🚀 Day 4 — Pure CSS Power
+Aaj ka focus:
+✅ CSS Selectors
+✅ Classes & IDs
+✅ Box Model (margin, padding, border)
+✅ Layout basics (Flexbox ka intro)
+
+📌 1️⃣ Selectors
+html
+Copy
+Edit
+<style>
+  p {
+    color: red;
+  }
+  .myClass {
+    font-size: 20px;
+  }
+  #myId {
+    background-color: yellow;
+  }
+</style>
+
+<p class="myClass">This is a class example.</p>
+<p id="myId">This is an ID example.</p>
+📌 2️⃣ Box Model
+Har element ke paas:
+
+Content
+
+Padding
+
+Border
+
+Margin
+
+css
+Copy
+Edit
+.box {
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 20px;
+}
+html
+Copy
+Edit
+<div class="box">Hello Box Model</div>
+📌 3️⃣ Flexbox Intro
+Simple alignment:
+
+html
+Copy
+Edit
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item {
+    background: lightgreen;
+    padding: 20px;
+  }
+</style>
+
+<div class="container">
+  <div class="item">One</div>
+  <div class="item">Two</div>
+  <div class="item">Three</div>
+</div>
+✅ Day 4 Mini Project
+Banana kya hai?
+Ek Profile Card Page:
+
+Ek div card banaao — photo, name, about section.
+
+CSS Box Model use karo — padding, margin, border.
+
+Flexbox se 2-3 cards ek row mein dikhao.
+
+External CSS file bana ke link karo. (Example: style.css)
+
+🔗 File structure:
+Copy
+Edit
+profile.html
+style.css
+✔️ Push karna:
+1️⃣ Changes GitHub Desktop se commit karo
+2️⃣ Push karo
+3️⃣ Bolo "Day 4 Done ✅"
+ -->
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 4 Learnings</title>
+        <style>
+            p {
+                color: red;
+            }
+            .myClass {
+                font-size: 20px;
+            }
+            #myId {
+                background-color: yellow;
+            }
+
+            .box {
+                height: 200px;
+                width: 200px;
+                background-color: lightblue;
+                padding: 20px;
+                margin: 20px;
+                border: 5px solid black;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item {
+                background-color: lightgreen;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="myClass">This is class example.</p>
+        <p id="myId">This is an ID example.</p>
+
+        <!-- Box Model -->
+         <div class="box">Hello Box Model</div>
+
+        <!-- Flex box intro -->
+         <div class="container">
+            <div class="item">One</div>
+            <div class="item">Two</div>
+            <div class="item">Three</div>
+         </div>
+
+    </body>
+</html>
