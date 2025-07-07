@@ -44,3 +44,110 @@ font-size: 24px;
 /* .nav-items ul:active {
     text-decoration: 1px solid red;
 } */
+
+
+/* --------------------------- Pricing section -------------------------------- */
+h2 {
+    text-align: center;
+    font-size: 24px;
+
+}
+.subscription-container {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.plan {
+    /* background-color: brown; */
+    border: 2px solid rgb(44, 183, 44);
+    width: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+/* .plan:hover {
+    box-shadow: 0, 0, 10px, rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+} */
+.plan-standard-border {
+    /* background-color: brown; */
+    border: 2px solid blueviolet;
+    width: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.plan-premium-border {
+    /* background-color: brown; */
+    border: 2px solid goldenrod;
+    width: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.plan-name {
+    color: rgb(44, 183, 44);
+    font-size: 24px;
+    font-weight: bold;
+}
+.plan-name-standard {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: bold;
+}
+.plan-name-premium {
+    color: goldenrod;
+    font-size: 24px;
+    font-weight: bold;
+}
+.price-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background-color: rgb(44, 183, 44);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.price-circle p {
+    color: white;
+    font-weight: bold;
+}
+.price-circle-standard {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background-color: blueviolet;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.price-circle-standard p {
+    color: white;
+    font-weight: bold;
+}
+.price-circle-premium {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background-color: goldenrod;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.price-circle-premium p {
+    color: white;
+    font-weight: bold;
+}
+
+.desc {
+    color: gray;
+}
