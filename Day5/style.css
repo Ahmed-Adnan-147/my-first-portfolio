@@ -182,9 +182,18 @@ h2 {
   text-align: center;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   /* width: 500px; */
   justify-content: center;
 }
-.footer-container div a {
+ .footer-items {
+  background-color: rgb(175, 255, 228);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  /* width: 500px; */
+  justify-content: center;
+}
+.footer-items div a {
     margin: 10px;
 }
