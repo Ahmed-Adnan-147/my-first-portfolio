@@ -186,6 +186,7 @@ h2 {
   /* width: 500px; */
   justify-content: center;
 }
+
  .footer-items {
   background-color: rgb(175, 255, 228);
   text-align: center;
@@ -194,6 +195,7 @@ h2 {
   /* width: 500px; */
   justify-content: center;
 }
+
 .footer-items div a {
     margin: 10px;
 }
