@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-3 (Strings)</title>
+</head>
+<body>
+     <!-- Key Hightlight or Summary of Lesson-3
+           1) String = text
+           2) Use strings & numbers together
+           3) Three ways to create strings. Eg: '...'   "..."   `...`
+           4) Escape characters: \' , \" , \n
+           5) Interpolation, multi-line strings
+           6) Adding a string & a number , convert it into a string.
+    -->
+
+    <h2>NOTE: do these exercises in the Console (right-click > Inspect > Console)</h2>
+    <p>3a. 'My name is: Adnan'</p>
+    <p>3b. 'Adnan'</p>
+    <p>3c. 'My name is:' + 'Adnan'</p>
+    <p>3d. 'Total cost: $' + (1*5 + 1*3) which is $8</p>
+    <p>3e. `Total cost: $${(1*5 + 1*3)}` which is $8</p>
+    <p>3f. alert(`Total cost: $${(1*5 + 1*3)}`)</p>
+    <p>3g. 'Total cost: $' + (599 + 295) /100 which is $8.94</p>
+    <p>3h. `Total cost: $${(599 + 295) /100}` which is $8.94</p>
+    <p>3i. alert(`Total cost: $${(599 + 295) /100}`) which is $8.94</p>
+    <p>3j. alert(`Total cost: $${(599 + 295) /100}
+                    Thank you, come again!`)
+    </p>
+    <!-- <p>3j. alert(`Total cost: $${(599 + 295) /100} \nThank you, come again!`)</p> -->
+
+
+    <!-- Challenge Exercises -->
+     <p>3k. `Items (${2 + 2}): $${((2095*2) + (799 *2))/100}` which is $57.88</p>
+     <p>3l. 'Shipping & handling: $' + (499 + 499) /100 which is $9.98</p>
+     <p>3m. 'Total before tax: $' + (5788 + 998)/100 which is $67.86</p>
+     <!-- <p>3n. 'Estimated tax (10%): $' + Math.round((67.86 * 0.1)*100)/100 which is $6.79</p> -->
+     <p>3n. `Estimated tax (10%): $${Math.round((2 * 2095 + 2 * 799 + 499 + 499) * 0.1) / 100}` which is $6.79</p>
+    
+</body>
+</html>
