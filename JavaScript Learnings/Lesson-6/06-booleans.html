@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson-6 (Booleans and If-Statements)</title>
+</head>
+<body>
+  <script>
+    // booleans are used to compare whether the condition is true or false
+    console.log(3 < 5);
+    console.log(3 > 5);
+
+    // we don't surround the booleans with ''
+    console.log(typeof 'true');
+    console.log(typeof true);
+
+    // == & === difference
+    console.log(5 == "5.00")  // true because it converts both values into the same type, it just goes with values but not type
+    console.log(5 === '5.00') // false because one value is a number & other value is a string
+
+    // if statements 
+    if(true) {
+      console.log('hello')
+    } else {
+      console.log('else')
+    }
+
+    const age = 79;
+    if(age > 18 && age < 60) {
+      console.log('Congratulations! You can drive');
+    } else if(age >= 60) {
+      console.log('You are old enough to drive')
+    } else {
+      console.log('Sorry, you cannot drive')
+    }
+
+  </script>
+</body>
+</html>

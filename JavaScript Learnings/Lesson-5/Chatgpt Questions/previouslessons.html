@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Previous Lessons Questions</title>
+  </head>
+  <body>
+    <!-- 4 -->
+    <button onclick="
+      btnQty += 1;
+      console.log(`Cart: ${btnQty} items`);
+      document.getElementById('cart').innerHTML = `You have ${btnQty} items in your cart.`;
+    ">Add to cart</button>
+
+    <button onclick="
+      btnQty -= 1;
+      console.log(`Cart: ${btnQty} items`);
+      document.getElementById('cart').innerHTML = `You have ${btnQty} items in your cart.`;
+    ">Remove from cart</button>
+    
+    <p id="cart"></p>
+
+
+    <script>
+      // 1
+      let btnQty = 0;
+
+    </script>
+  </body>
+</html>

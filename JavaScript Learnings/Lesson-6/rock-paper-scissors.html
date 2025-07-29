@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Project</title>
+</head>
+<body>
+  <!-- My task strategy -->
+  <!-- <p>Rock Paper Scissors</p>
+  <button onclick="
+    userSelection += 'rock'
+    console.log(status)
+    if(status === 'Tie') {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. ${status} `);
+      userSelection = '';
+    }else {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. You ${status}. `);
+      userSelection = '';
+    }
+    ">Rock</button>
+
+<button onclick="
+    userSelection += 'paper'
+    if(status === 'Tie') {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. ${status} `);
+      userSelection = '';
+    }else {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. You ${status}. `);
+      userSelection = '';
+    }
+    ">Paper</button>
+
+<button onclick="
+    userSelection += 'scissors'
+    if(status === 'Tie') {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. ${status} `);
+      userSelection = '';
+    }else {
+      alert(`You picked ${userSelection}. Computer picked ${computerSelection}. You ${status}. `);
+      userSelection = '';
+    }
+  ">Scissors</button>
+
+  <script>
+    const computerSelection = 'rock';
+    let userSelection = 'paper';
+    let status = '';
+    if(computerSelection === 'rock' && userSelection === 'rock' ) {
+      status += 'Tie';
+    } else if(computerSelection === 'paper' && userSelection === 'paper') {
+      status += 'Tie'
+    } else if(computerSelection === 'scissors' && userSelection === 'scissors') {
+      status += 'Tie'
+    } else if(computerSelection === 'rock' && userSelection === 'scissors') {
+      status += 'lose'
+    } else if(computerSelection === 'rock' && userSelection === 'paper') {
+      status += 'win'
+    } else if(computerSelection === 'paper' && userSelection === 'scissors') {
+      status += 'win'
+    } else if(computerSelection === 'paper' && userSelection === 'rock') {
+      status += 'lose'
+    } else if(computerSelection === 'scissors' && userSelection === 'rock') {
+      status += 'win'
+    } else if(computerSelection === 'scissors' && userSelection === 'paper') {
+      status += 'lose'
+    } -->
+
+
+  <p>Rock Paper Scissors</p>
+
+  <button onclick="
+  const computerSelection = Math.random();
+    console.log(computerSelection, 'computerSelections');
+  if(computerSelection <= 0.33 && computerSelection > 0) {
+      alert('rock')
+    } else if (computerSelection > 0.34 && computerSelection <= 0.63) {
+      alert('paper');
+    } else {
+      alert('scissors')
+    }
+    
+    // userSelection += 'rock'
+    // console.log(status)
+    // if(status === 'Tie') {
+    //   alert(`You picked ${userSelection}. Computer picked ${computerSelection}. ${status} `);
+    //   userSelection = '';
+    // }else {
+    //   alert(`You picked ${userSelection}. Computer picked ${computerSelection}. You ${status}. `);
+    //   userSelection = '';
+    // }
+    ">Rock</button>
+
+  <script>
+    
+    // if(computerSelection <= 0.33 && computerSelection > 0) {
+    //   alert('rock')
+    // } else if (computerSelection > 0.34 && computerSelection <= 0.33) {
+    //   alert('paper');
+    // } else {
+    //   alert('scissors')
+    // }
+    // let userSelection = 'paper';
+    // let status = '';
+    // if(computerSelection === 'rock' && userSelection === 'rock' ) {
+    //   status += 'Tie';
+    // } else if(computerSelection === 'paper' && userSelection === 'paper') {
+    //   status += 'Tie'
+    // } else if(computerSelection === 'scissors' && userSelection === 'scissors') {
+    //   status += 'Tie'
+    // } else if(computerSelection === 'rock' && userSelection === 'scissors') {
+    //   status += 'lose'
+    // } else if(computerSelection === 'rock' && userSelection === 'paper') {
+    //   status += 'win'
+    // } else if(computerSelection === 'paper' && userSelection === 'scissors') {
+    //   status += 'win'
+    // } else if(computerSelection === 'paper' && userSelection === 'rock') {
+    //   status += 'lose'
+    // } else if(computerSelection === 'scissors' && userSelection === 'rock') {
+    //   status += 'win'
+    // } else if(computerSelection === 'scissors' && userSelection === 'paper') {
+    //   status += 'lose'
+    // }
+    
+  </script>
+</body>
+</html>
