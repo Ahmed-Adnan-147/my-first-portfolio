@@ -8,32 +8,83 @@
 <body>
   <script>
     // booleans are used to compare whether the condition is true or false
-    console.log(3 < 5);
-    console.log(3 > 5);
+    // console.log(3 < 5);
+    // console.log(3 > 5);
 
-    // we don't surround the booleans with ''
-    console.log(typeof 'true');
-    console.log(typeof true);
+    // // we don't surround the booleans with ''
+    // console.log(typeof 'true');
+    // console.log(typeof true);
 
-    // == & === difference
-    console.log(5 == "5.00")  // true because it converts both values into the same type, it just goes with values but not type
-    console.log(5 === '5.00') // false because one value is a number & other value is a string
+    // // == & === difference
+    // console.log(5 == "5.00")  // true because it converts both values into the same type, it just goes with values but not type
+    // console.log(5 === '5.00') // false because one value is a number & other value is a string
 
-    // if statements 
-    if(true) {
-      console.log('hello')
-    } else {
-      console.log('else')
-    }
+    // // if statements 
+    // if(true) {
+    //   console.log('hello')
+    // } else {
+    //   console.log('else')
+    // }
 
-    const age = 79;
-    if(age > 18 && age < 60) {
-      console.log('Congratulations! You can drive');
-    } else if(age >= 60) {
-      console.log('You are old enough to drive')
-    } else {
-      console.log('Sorry, you cannot drive')
-    }
+    // const age = 79;
+    // if(age > 18 && age < 60) {
+    //   console.log('Congratulations! You can drive');
+    // } else if(age >= 60) {
+    //   console.log('You are old enough to drive')
+    // } else {
+    //   console.log('Sorry, you cannot drive')
+    // }
+
+    // ---------- More details about booleans & if-statements --------------------------------------
+    //  Truthy & Falsy values
+
+    // if(5) {
+    //   console.log('truthy'); 
+    // }
+    // if(0) {
+    //   console.log('truthy'); // this code doesn't work
+    // }
+
+    // Why do we use truthy & falsy values? 
+    // const cartQuantity = 5;
+    // // if(cartQuantity > 0) { // we usually use this but now instead of this we can also use truthy value
+    // if(cartQuantity ) {
+    //   console.log('cart has products.')
+    // }
+
+    // // Truthy & Falsy also works with the logical operators.
+    // console.log(!0);
+    // console.log('text'/5);
+
+    // let variable1;
+    // console.log(variable1); // gives undefined
+    // // if you want to use undefined with const then
+    // const variable2 = undefined;
+    // console.log(variable2)
+
+    // ----------------------- Shortcuts of If-Statements --------------------------------
+    // Ternary Operator
+    // const result = true ? 'truthy' : 'falsy';
+    // console.log(result); // prints truthy
+    // const result1 = 0 ? 'truthy' : 'falsy';  
+    // console.log(result1); // prints falsy
+
+    // Guard Operator (&&)
+    // false && console.log('hello')  // it will just check the left side , if it gives false then it will display falsy without even going to the right
+    // const message = false && 'hello';
+    // console.log(message, 'message')
+    // const message1 = 5 && 'hello';
+    // console.log(message1, 'message1')
+
+    // Default Operator (||) // same but works for the OR operator
+    const currency = 'EUR' || 'USA';
+    console.log(currency)
+    const currency1 = undefined || 'USA'; // now OR Operator will not short-circuit, it will continue with right side
+    console.log(currency1)
+
+
+
+
 
   </script>
 </body>
