@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate Level Questions</title>
+</head>
+<body>
+  <script>
+    // 1
+    const score = 92;
+    if(score >= 90 && score <= 100) {
+      console.log("A grade")
+    } else if(score >= 80 && score < 90) {
+      console.log("B grade")
+    } else if(score >= 70 && score < 80) {
+      console.log("C grade")
+    } else {
+      console.log("Fail")
+    }
+
+    // 2
+    const username = 'Adnan';
+    console.log(username ? `Welcome, ${username}` : 'Guest');
+
+    // 3
+    const cart = null;
+    console.log(cart || 'Cart is empty')
+
+    // 4
+    const isLoggedIn = true;
+    // const isLoggedIn = false; // nothing will display
+    isLoggedIn && console.log('Welcome back!')
+
+    // Example for 4 to understand
+    // const age = 25;
+    // age > 18 && console.log("You can vote!");
+    // // Output: You can vote!
+
+    // const age2 = 15;
+    // age2 > 18 && console.log("You can vote!");
+    // // Output: nothing (no error)
+  </script>
+  
+</body>
+</html>

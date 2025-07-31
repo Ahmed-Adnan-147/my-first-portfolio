@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenging Level Questions</title>
+</head>
+<body>
+  <script>
+    // 1 (Truthy/Falsy Checker)
+    const array = [0, 1, '', 'hello', null, undefined, NaN, '0'];
+    const val1 = 0;
+    if (val1) {
+      console.log('0 is Truthy');
+    } else {
+      console.log('0 is Falsy');
+    }
+
+    const val2 = 1;
+    if (val2) {
+      console.log('1 is Truthy');
+    } else {
+      console.log('1 is Falsy');
+    }
+
+    const val3 = '';
+    if (val3) {
+      console.log('"" is Truthy');
+    } else {
+      console.log('"" is Falsy');
+    }
+
+    const val4 = 'hello';
+    if (val4) {
+      console.log('"hello" is Truthy');
+    } else {
+      console.log('"hello" is Falsy');
+    }
+
+    const val5 = null;
+    if (val5) {
+      console.log('null is Truthy');
+    } else {
+      console.log('null is Falsy');
+    }
+
+    const val6 = undefined;
+    if (val6) {
+      console.log('undefined is Truthy');
+    } else {
+      console.log('undefined is Falsy');
+    }
+
+    const val7 = NaN;
+    if (val7) {
+      console.log('NaN is Truthy');
+    } else {
+      console.log('NaN is Falsy');
+    }
+
+    const val8 = '0';
+    if (val8) {
+      console.log('"0" is Truthy');
+    } else {
+      console.log('"0" is Falsy');
+    }
+
+    // 2
+    const playerMove = 'rock';
+    const computerMove = 'scissors';
+    if(playerMove === 'rock' && computerMove === 'rock') {
+      console.log('Tie')
+    } else if (playerMove === 'paper' && computerMove === 'paper') {
+      console.log('Tie')
+    } else if (playerMove === 'scissors' && computerMove === 'scissors') {
+      console.log('Tie')
+    } else if (playerMove === 'rock' && computerMove === 'paper') {
+      console.log('You lose')
+    } else if (playerMove === 'rock' && computerMove === 'scissors') {
+      console.log('You win')
+    } else if (playerMove === 'paper' && computerMove === 'scissors') {
+      console.log('You lose')
+    } else if (playerMove === 'paper' && computerMove === 'rock') {
+      console.log('You win')
+    } else if (playerMove === 'scissors' && computerMove === 'paper') {
+      console.log('You win')
+    } else if (playerMove === 'scissors' && computerMove === 'rock') {
+      console.log('You lose')
+    }
+
+
+    // 3
+    const guess = 'heads';
+    const actual = 'tails';
+    if(guess === actual) {
+      console.log('You win')
+    } else if(guess !== actual ) {
+      console.log('You lose')
+    }
+
+
+  </script>
+</body>
+</html>
