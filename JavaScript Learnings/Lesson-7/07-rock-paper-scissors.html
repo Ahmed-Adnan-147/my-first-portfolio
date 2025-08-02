@@ -11,56 +11,24 @@
   <p>Rock Paper Scissors</p>
 
   <button onclick="
-  // pickComputerMove();
-  const computerSelection = pickComputerMove();
-  // if(computerSelection === 'rock') {
-  //     status = 'Tie.';
-  //   } else if(computerSelection === 'paper') {
-  //     status = 'You lose.'
-  //   } else if(computerSelection === 'scissors') {
-  //     status = 'You win.'
-  //   }
-    
-  //   alert(`You picked rock. Computer picked ${computerSelection}. ${status} `);
-  //   ">
+    displayResult('rock')
+  ">
     Rock
   </button>
 
   <button onclick="
-  // pickComputerMove();
-  const computerSelection = pickComputerMove();
-  // if(computerSelection === 'rock') {
-  //     status = 'You win.';
-  //   } else if(computerSelection === 'paper') {
-  //     status = 'Tie.'
-  //   } else if(computerSelection === 'scissors') {
-  //     status = 'You lose.'
-  //   }
-    
-  //   alert(`You picked paper. Computer picked ${computerSelection}. ${status} `);
-  //   ">
+    displayResult('paper')
+  ">
     Paper
   </button>
 
   <button onclick="
-  // console.log(pickComputerMove());
-  const computerSelection = pickComputerMove();  // we can also use another variable name as computerMove as well
-  displayResult('scissors')
-  // if(computerSelection === 'rock') {
-  //     status = 'You lose.';
-  //   } else if(computerSelection === 'paper') {
-  //     status = 'You win.'
-  //   } else if(computerSelection === 'scissors') {
-  //     status = 'Tie.'
-  //   }
-    
-  //   alert(`You picked scissors. Computer picked ${computerSelection}. ${status} `);
+    displayResult('scissors')
     ">
     Scissors
   </button>
 
   <script>
-    let status = '';
     
     function pickComputerMove() {
       const randomNumber = Math.random();
@@ -80,19 +48,40 @@
       return computerSelection;
     }
 
-    function displayResult(computerSelection) {
-      if(computerSelection === 'scissors') {
+    function displayResult(userMove) {
+      const computerSelection = pickComputerMove();
+      let status = '';
+
+      if(userMove === 'scissors') {
         if(computerSelection === 'rock') {
-        status = 'You lose.';
-      } else if(computerSelection === 'paper') {
-        status = 'You win.'
-      } else if(computerSelection === 'scissors') {
-        status = 'Tie.'
+          status = 'You lose.';
+        } else if(computerSelection === 'paper') {
+          status = 'You win.'
+        } else if(computerSelection === 'scissors') {
+          status = 'Tie.'
+        }
+
+      } else if(userMove === 'paper') {
+        if(computerSelection === 'rock') {
+          status = 'You win.';
+        } else if(computerSelection === 'paper') {
+          status = 'Tie.'
+        } else if(computerSelection === 'scissors') {
+          status = 'You lose.'
+        }
+
+      } else if(userMove === 'rock') {
+        if(computerSelection === 'rock') {
+          status = 'Tie.';
+        } else if(computerSelection === 'paper') {
+          status = 'You lose.'
+        } else if(computerSelection === 'scissors') {
+          status = 'You win.'
+        }
       }
       
-      return alert(`You picked scissors. Computer picked ${computerSelection}. ${status} `);
-
-      }
+      alert(`You picked ${userMove}. Computer picked ${computerSelection}. ${status} `);
+    
     }
   </script>
 </body>

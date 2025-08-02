@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson-7f (Questions Solving)</title>
+</head>
+<body>
+  <script>
+    function convertTemperature(degrees, unit) {
+      if(unit === 'C') {
+        let Fahrenheit;
+        Fahrenheit = (degrees * 9/5) + 32;
+        return `${Fahrenheit}F`;
+      } else {
+        let Celsius;
+        Celsius = (degrees - 32) * 5/9;
+        return `${Celsius}C`;
+      }
+    }    
+
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'F'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson-7h (Questions Solving)</title>
+</head>
+<body>
+  <!-- 
+    1 mile = 5280 ft
+    1 km = 3281 ft
+  -->
+  <script>
+    function convertLength(length, from, to) {
+      // const oneMile = 5280;
+      // const oneKm = 3281;
+      if(from === 'miles' && to === 'km') {
+        const oneMile = 1.6;
+        const result = oneMile * length;
+        console.log(`${result} km`);
+        return `${result} km`;
+      } else if(from === 'miles' && to === 'ft') {
+        const oneMile = 5280;
+        const result = oneMile * length;
+        console.log(`${result} ft`);
+        return `${result} ft`;
+      } else if(from === 'km' && to === 'ft') {
+        const oneKm = 3281;
+        const result = oneKm * length;
+        console.log(`${result} ft`);
+        return `${result} ft`;
+      } else {
+        console.log(`Invalid unit: ${from}`)
+      }
+      
+    }
+
+    convertLength(5, 'miles', 'km')
+    convertLength(5, 'miles', 'ft')
+    convertLength(5, 'km', 'ft')
+    convertLength(5, 'lbs', 'lbs')
+    
+  </script>
+</body>
+</html>

@@ -8,14 +8,32 @@
 <body>
   <script>
     // creating a function
-    function function1() {
-      console.log('hello');
-      console.log(2 + 2);
-    }    
+    // function function1() {
+    //   console.log('hello');
+    //   console.log(2 + 2);
+    // }    
 
-    // calling a function/ running / executing a function
-    function1(); 
-    function1(); // we can also reuse a code as many times as we want
+    // // calling a function/ running / executing a function
+    // function1(); 
+    // function1(); // we can also reuse a code as many times as we want
+
+    // Parameters----------------------
+    // lets pass a parameter now to put a dynamic value into a function instead of manually entering
+    // function calculateTax(cost) {
+    //   // console.log(1000 * 0.1);
+    //   console.log(cost * 0.1);
+    // }
+    // calculateTax(2000);
+    // calculateTax(6000);
+
+    // we can have more that one parameter
+    function calculateTax(cost, taxPercent= 0.1) {
+      // console.log(taxPercent) // if we don't provide any value this gives undefined , and cost when multiplied with undefined gives NaN
+      console.log(cost * taxPercent);
+    }
+    calculateTax(2000, 0.2)
+    calculateTax(5000)  // this line given NaN because we don't provide any value to this
+    calculateTax(6000)  
   </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson-7g (Questions Solving)</title>
+</head>
+<body>
+  <!-- 1 mile = 1.6 km -->
+  <script>
+    function convertLength(length, from, to) {
+      const oneMile = 1.6;
+      if(from === 'miles' && to === 'km') {
+        const value = `${length*oneMile} km`;
+        console.log(value);
+        return value;
+      } else if(from === 'km' && to === 'miles') {
+        const value = `${length/oneMile} miles`;
+        console.log(value)
+        return value;
+      } else if(from === 'km' && to === 'km') {
+        const value = `${length} km`;
+        console.log(value)
+        return value;
+      }
+    }
+
+    convertLength(50, 'miles', 'km')
+    convertLength(32, 'km', 'miles')
+    convertLength(50, 'km', 'km')
+    
+  </script>
+</body>
+</html>
