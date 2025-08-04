@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate Level Questions</title>
+</head>
+<body>
+  <script>
+    // 1
+    function calculateTotal(price, quantity) {
+      return price * quantity;
+    }
+    let total = calculateTotal(10, 3);
+    console.log(total);
+
+    // 2
+    function getGreeting(name) {
+      return `Hello ${name}! Welcome back.`;
+    }
+    console.log(getGreeting('Adnan'));
+    console.log(getGreeting('Mannan'));
+    console.log(getGreeting('Ismail'));
+
+    // 3
+    function isAdult(age) {
+      // if(age >= 18) {
+      //   return true;
+      // }else {
+      //   return false;
+      // }
+      
+      let result = age >= 18 ? true : false;
+      return result;
+    }
+    console.log(isAdult(21));
+    console.log(isAdult(12));
+
+    // 4
+    function addToCart(currentQty, addedQty = 1) {
+      const cartQuantity = currentQty + addedQty;
+      return cartQuantity;
+    }
+    console.log(addToCart(5));  // if value is not passed to parmeter its taking the default value of parameter
+    console.log(addToCart(5, 3));
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previous Lessons Combined Questions</title>
+</head>
+<body>
+  <!-- 1 -->
+  <input type="text" placeholder="Username" id="username">
+  <button onclick="
+    let name = document.getElementById('username').value;
+    greetUser(name);
+  ">Greet</button>
+  
+  <script>
+    // 1
+    function greetUser(name) {
+      if(name === '' || name === "null" || name === 'undefined' || name === 'false') {
+        document.body.innerHTML = `<h1>Hello, Guest</h1>`;
+        // return 'Hello, Guest';
+      } else {
+        document.body.innerHTML = `<h1>Hello, ${name}</h1>`;
+        // return `Hello, ${name}`;
+      }
+    }
+
+    // 2
+    function calculate(num1, num2, operator) {
+      const total = `${num1} ${operator} ${num2}`;
+      return eval(total);
+      // console.log(total)
+    }
+    console.log(calculate(5, 3, '+'));  // 8
+    console.log(calculate(10, 2, '*')); // 20
+
+  </script>
+</body>
+</html>

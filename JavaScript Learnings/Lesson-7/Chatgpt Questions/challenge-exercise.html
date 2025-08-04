@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenging Exercises From Chatgpt</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      function getResult(playerMove, computerMove) {
+        if(playerMove === computerMove) {
+          return 'Tie'
+        } else if(playerMove === 'rock' && computerMove === 'paper') {
+          return 'Lose'
+        } else if(playerMove === 'rock' && computerMove === 'scissors') {
+          return 'Win'
+        } else if(playerMove === 'paper' && computerMove === 'rock') {
+          return 'Win'
+        } else if(playerMove === 'paper' && computerMove === 'scissors') {
+          return 'Lose'
+        } else if(playerMove === 'scissors' && computerMove === 'rock') {
+          return 'Lose'
+        } else if(playerMove === 'scissors' && computerMove === 'paper') {
+          return 'Win'
+        }
+      }
+      console.log(getResult('rock', 'scissors'));
+      console.log(getResult('rock', 'paper'));
+      console.log(getResult('rock', 'rock'));
+
+      console.log(getResult('scissors', 'paper'));
+      console.log(getResult('scissors', 'rock'));
+      console.log(getResult('scissors', 'scissors'));
+
+
+      // 2
+      function evaluate(expression) {
+        return eval(expression);
+      }
+      console.log(evaluate("10 + 5 * 2"));
+      console.log(evaluate("10 + 5 * 2 / 2"));
+
+      // 3
+      function greetUser(name) {
+        // if(!name) {
+        //   return 'Guest'
+        // } else {
+        //   return `Hello, ${name}`;
+        // }
+
+        if(name === '' || name === undefined || name === null) {
+          return 'Guest'
+        } else {
+          return `Hello, ${name}`;
+        }
+      }
+      console.log(greetUser('Adnan'));
+      console.log(greetUser(''));
+      console.log(greetUser(null));
+      console.log(greetUser(undefined));
+
+    </script>
+  </body>
+</html>
