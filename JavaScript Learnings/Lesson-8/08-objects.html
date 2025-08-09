@@ -8,6 +8,7 @@
 <body>
 
   <script>
+    /*
     const product = {
       name: 'socks',
       price: 1090
@@ -24,11 +25,60 @@
     product.name = 'cotton-socks';
     console.log(product);
 
+    console.log(product.age);  // gives undefined if we access a property which doesn't exist
+
     product.newProperty = true;
     console.log(product)
 
     delete product.newProperty;
     console.log(product);
+    */
+
+    // ------------------------------------------------------------------------------
+    // More details about Objects:
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      // shortcut is
+      // 'delivery-time': '2 day'
+
+      // Nested object
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+
+      // Function - This works bcoz a function is another type of value in JS.
+      fun: function func1() {
+        console.log('function inside object')
+      }
+    };
+
+    console.log(product2);
+    // console.log(product2.name);
+    // console.log(product2['name']);
+    // console.log(product2.delivery-time); // gives error instead of undefined , bcoz Js thinks it is minus sign
+
+    // so we use Bracket Notation
+    console.log(product2['delivery-time'])
+
+    // Nested Objects
+    console.log(product2.rating.stars)
+
+    // Function
+    product2.fun() // as fun is also a function bcoz it is stored in the form of tag. this works
+
+    /*
+      NOTE:  - when we call a function inside an object, this is called a Method.
+             - we've actually been using the Methods , this whole times, like console.log() is a Method itself.
+             - console is an object provided by JS, and log is a function that is saved inside the console object.
+    */
+
+    console.log(typeof console);      // Object
+    console.log(typeof console.log);  // Function
+
+
+
   </script>
 </body>
 </html>
