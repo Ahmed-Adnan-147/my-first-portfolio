@@ -37,6 +37,12 @@
   </button>
 
   <script>
+    const gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || {
+    win: 0,
+    lose: 0,
+    tie: 0
+  };
+
     
     function pickComputerMove() {
       const randomNumber = Math.random();
@@ -56,11 +62,11 @@
       return computerSelection;
     }
 
-    const gameHistory = {
-      win: 0,
-      lose: 0,
-      tie: 0
-    };
+    // const gameHistory = {
+    //   win: 0,
+    //   lose: 0,
+    //   tie: 0 
+    // };
 
     // youtube strategy
     function displayResult(userMove) {
@@ -102,6 +108,8 @@
       } else if(status === 'Tie.') {
         gameHistory.tie += 1;
       }
+
+      localStorage.setItem('gameHistory', JSON.stringify(gameHistory));
 
       alert(`You picked ${userMove}. Computer picked ${computerSelection}. ${status} \nWins: ${gameHistory.win}, Losses: ${gameHistory.lose}, Ties: ${gameHistory.tie} `);
     
