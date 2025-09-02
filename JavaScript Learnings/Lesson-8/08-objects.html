@@ -75,7 +75,24 @@
     */
 
     console.log(typeof console);      // Object
-    console.log(typeof console.log);  // Function
+    console.log(typeof console.log);  // Function inside the console object
+
+    // Another example of a Method is Math.random() --> Math is an object and random is a function inside Math object
+
+    // ---------------------------------------------------------------------------------------------------------
+    // Built-in Objects
+    // i) JSON
+    // ii) localStorage
+
+    // Convert JavaScript Object -> JSON
+    console.log(JSON.stringify(product2)); // Here we are converting an Object into JSON. 
+    // NOTE: function inside the object is not exist in JSON, as the JSON does not support functions
+    console.log(typeof JSON.stringify(product2));  // string
+    
+    // Convert JSON -> JavaScript Object
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
 
 
 
