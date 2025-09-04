@@ -93,6 +93,24 @@
     const jsonString = JSON.stringify(product2);
     console.log(JSON.parse(jsonString));
 
+    // ---------------------------------------------------------------------------------------
+    // Auto Boxing
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    // --------------------------------------------------------------------------------------
+    // Objects are references
+
+    const object1 = {
+      message: 'hello'
+    }
+
+    const object2 = object1;
+
+    object1.message = 'Good job!';
+    console.log(object1)
+
 
 
 
