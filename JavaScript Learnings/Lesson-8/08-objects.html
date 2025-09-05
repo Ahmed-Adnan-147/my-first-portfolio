@@ -109,9 +109,22 @@
     const object2 = object1;
 
     object1.message = 'Good job!';
-    console.log(object1)
+    console.log(object1);
+    console.log(object2);
 
 
+    const object3 = {
+      message: 'Good job!'
+    };
+    
+    console.log(object3 === object1); // false even though they have the same values inside, that's bcoz objects are references, so object3 also contains a refernce
+    console.log(object2 === object1); // as we have same reference, it gives us true
+    
+    
+    // Shortcuts for Objects
+    const object4 = {
+      message: 'Good job!'
+    };
 
 
   </script>
