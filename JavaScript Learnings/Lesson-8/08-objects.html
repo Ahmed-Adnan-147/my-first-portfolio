@@ -121,9 +121,39 @@
     console.log(object2 === object1); // as we have same reference, it gives us true
     
     
+    // --------------------------------------------------------------------------
     // Shortcuts for Objects
     const object4 = {
-      message: 'Good job!'
+      message: 'Good job!',
+      price: 799
+    };
+
+    // const message = object4.message;
+    // destructuring - this shortcut took the property out of the object and saved it in the message variable, we can also use this for multiple properties
+    // destructuring - easier way to take properties out of an object
+    const { message, price } = object4; // works same as above line of code
+    console.log(message);
+    console.log(price);
+
+    // --------------------------------------------------------------------------
+    // Shorthand Property
+    const object5 = {  
+      // message: message // the shortcut for this is
+      message // shortcut
+    };
+    console.log(object5)
+
+    // --------------------------------------------------------------------------
+    // Shorthand Method
+    const object6 = {  
+      message // shortcut
+      // method: function function1() {
+      //   console.log('method');
+      // }
+      
+      // method() {
+      //   console.log('method'); 
+      // }
     };
 
 
