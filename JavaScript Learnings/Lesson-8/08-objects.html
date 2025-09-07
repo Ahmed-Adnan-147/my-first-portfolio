@@ -165,6 +165,33 @@
     // product.price = 2595;
     // console.log(product)
 
+    // product['delivery-time'] = '3 days'
+    // console.log(product)
+
+
+    function comparePrice(product1, product2) {
+      const prod1Price = product1.price;
+      const prod2Price = product2.price;
+
+      if(prod1Price < prod2Price) {
+        return `${product1.name} is less expensive.`
+      } else {
+        return `${product2.name} is less expensive.`
+      }
+
+    }
+
+    const obj1 = {
+      name: 't-shirt',
+      price: 400
+    };
+    const obj2 = {
+      name: 'jeans',
+      price: 800
+    };
+    
+    console.log(comparePrice(obj1, obj2));
+
 
   </script>
 </body>
